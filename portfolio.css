@@ -1,0 +1,97 @@
+body {
+    background: #0a0a0a;
+    color: #e0f7fa;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h2, h4 {
+    color: #00fff7;
+}
+
+a {
+    color: #00fff7;
+}
+
+a:hover {
+    color: #06f;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #0ff, #06f);
+    color: #000;
+    text-align: center;
+    padding: 6rem 1rem;
+    border-bottom: 2px solid #00fff7;
+    box-shadow: 0 0 20px #00fff7 inset;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(90deg, rgba(0,255,255,0.15), rgba(255,0,255,0.15));
+    animation: moveBg 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 0; }
+}
+
+/* Sections */
+.section {
+    padding: 5rem 0;
+}
+
+/* Cards */
+.card {
+    background: rgba(0,0,0,0.6);
+    border: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 40px #0ff, 0 0 80px #06f;
+}
+
+/* Skills */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 20px #0ff, 0 0 40px #06f;
+}
+
+/* Badges for certificates */
+.badge-cert {
+    background: #000;
+    color: #00fff7;
+    border: 1px solid #00fff7;
+    margin: 3px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.badge-cert:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0ff, 0 0 30px #06f;
+}
